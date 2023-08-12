@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@1,900&display=swap");
+@import url(./reset.css);
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+
+body {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  /* 桌機 */
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+
+  /* 平板 */
+  @media (max-width: 768px) {
+    max-width: 720px;
+  }
+
+  /* 手機 */
+  @media (max-width: 375px) {
+    max-width: 372px;
+  }
+}
+
+/* utilities */
+.bg-primary {
+  background-color: #aa0601;
+}
+
+
+/* components */
+.navbar {
+  padding: 16px 0;
+
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+  }
+}
+
+.navbar-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}
+
+.navbar-logo {
+  width: 80px;
+
+  @media (max-width: 768px) {
+    margin: 0 0 16px 16px;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.navbar-item {
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-right: 0px;
+    border: 1px solid #ffffff;
+  }
+}
+
+.navbar-link {
+  height: 100%;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 8px 32px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+.navbar-link:hover {
+  opacity: 0.7;
+}
+
+.navbar-item:last-child .navbar-link {
+  padding-right: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.pb-32 {
+  padding-bottom: 32px;
+}
+
+.footer {
+  background-color: #AA0601;
+  color: #fff;
+  padding: 48px 0 32px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav a {
+  padding-right: 48px;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-icon {
+  display: flex;
+}
+
+.footer-icon img {
+  max-width: 48px;
+  margin-left: 32px;
+
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer-detail {
+  font-size: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.phone {
+  margin-top: 36px;
+}
+
+.mail {
+  margin-top: 8px;
+
+}
+
+.copyright {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+}
+
+.footer-copy {
+  font-family: "Roboto", sans-serif;
+}
+
+.copyright-sub {
+  display: flex;
+  font-size: 14px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+
+
+.copyright-sub a {
+  color: #FFFFFF;
+  padding-left: 48px;
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .copyright-sub li {
+    margin-top: 8px;
+  }
+}
+
+.fs-36 {
+  font-size: 36px;
+  font-family: "Roboto";
+  text-align: left;
+  padding-left: 3px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    font-family: "Roboto";
+  }
+
+}
